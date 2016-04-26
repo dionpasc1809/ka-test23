@@ -48,3 +48,4 @@ Temporary Items
 
 .idea/*
 *.zip
+node_modules/*
