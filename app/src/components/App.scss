@@ -72,12 +72,16 @@ html *, html *:before, html *:after {
 
 .keyaliaslogo {
   width: 200px;
-  height: 50px;
-  border: 1px solid #fff;
+  height: 32px;
+  background-image:url('img/logo-keyalias.png');
 }
 
 /*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||popup|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
 .popup {
+  .mainpanel {
+    padding-bottom: 50px;
+  }
+
   .logobar {
     height: 60px;
     width: 100%;
@@ -173,13 +177,14 @@ html *, html *:before, html *:after {
     .socmed.twitter {
       background-color: skyblue;
     }
+  }
 
-    .footer {
-      position: absolute;
-      bottom: 10px;
-      margin: 0 15px;
-      color: #bbb;
-    }
+
+  .footer {
+    position: absolute;
+    bottom: 10px;
+    margin: 0 15px;
+    color: #bbb;
   }
 
   .inputs {
@@ -220,7 +225,7 @@ html *, html *:before, html *:after {
 
 .popup.main-container {
   width: 300px;
-  height: 550px;
+  min-height: 550px;
   border: 1px solid;
   text-align: center;
   position: relative;
@@ -274,5 +279,114 @@ html *, html *:before, html *:after {
   }
   .button.register {
     background-color: #B3B3B3;
+  }
+}
+
+.popup.dashboard {
+  .headerpanel {
+    padding:15px;
+    padding-bottom:30px;
+    -webkit-flex-flow: row wrap;
+    justify-content: flex-start;
+
+    .profile-img {
+      width: 40px;
+      height: 40px;
+      border: 1px solid #FFF;
+    }
+
+    .profile-name {
+      color: #FFF;
+      font-size: 1.75em;
+      text-transform: capitalize;
+      margin: 5px 0;
+      flex-grow:1;
+      text-align:left;
+      padding-left:15px;
+    }
+  }
+
+  .dashboard-container {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: column wrap;
+    justify-content: space-around;
+    padding:15px;
+
+    .item {
+      background-color: #FFF;
+      margin-bottom: 10px;
+      text-align:left;
+    }
+    .item.alias {
+
+      .alias-container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction:column;
+        height: 140px;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+        align-content:space-between;
+        justify-content: space-between;
+
+        .alias-item {
+          flex: 0 1 calc(50% - 5px);
+          margin-left: 5px;
+          margin-right:5px;
+          margin-top: 5px;
+          height: 40px;
+          padding: 10px;
+          padding-left: 25px;
+          background-color: #ababab;
+          border-radius: 3px;
+          border: 1px solid #666666;
+          font-size: 2.6em;
+
+          .alias-type {
+            font-size: 0.4em;
+          }
+
+          .alias-name {
+            font-size: 0.35em;
+          }
+        }
+      }
+    }
+
+
+    .item.minat {
+      .minat-container {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-flow: row wrap;
+        justify-content: space-around;
+        font-size:2em;
+
+        .minat-item {
+          flex: 0 1 calc(50% - 5px);
+          margin-left:5px;
+          margin-top:5px;
+        }
+      }
+    }
+  }
+}
+
+
+.popup.dashboard.personal-data {
+  .headerpanel {
+    padding:15px;
+    padding-top:40px;
+    padding-bottom:5px;
+    -webkit-flex-flow: row wrap;
+    justify-content: flex-start;
   }
 }

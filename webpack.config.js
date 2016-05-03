@@ -23,15 +23,20 @@ module.exports = {
             {
                 test: /\.jsx?$/,
                 exclude: /node_modules/,
-                loaders: ['react-hot','babel?presets[]=es2015&presets[]=react']
+                loaders: ['react-hot','babel?presets[]=es2015&presets[]=react&plugins[]=react-html-attrs&plugins[]=transform-class-properties&plugins[]=transform-decorators-legacy']
             },
             {
                 test: /\.scss$/,
                 loaders: ['style','css','sass']
-            }]
+            },
+            {
+                test: /\.(jpg|png)$/,
+                loader: 'url-loader?limit=1000000'
+            },
+        ]
     },
     resolve: {
-        extensions: ['', '.js', '.jsx']
+        extensions: ['','.js', '.jsx']
     },
     output: {
         path: process.env.NODE_ENV === 'production' ? path.resolve(ROOT_PATH, 'app/dist') : path.resolve(ROOT_PATH, 'app/build'),

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 import DocumentTitle from 'react-document-title';
-import Todo from './Todo.jsx';
+import Todo from './main/Todo.jsx';
 
 require('./App.scss');
 
